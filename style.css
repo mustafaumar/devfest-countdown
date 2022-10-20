@@ -1,0 +1,311 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body{
+    font-family: 'Karla', sans-serif;
+    font-size: 18px;
+    font-weight: 300;
+    min-width: 375px;
+    min-height: 100vh;
+}
+.intro{
+    width:100%;
+    transition: 0.2s all;
+    overflow: hidden;
+
+
+}
+
+.box{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    padding: 50px 20px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    box-shadow: 10px 10px 16px 3px rgba(0,0,0,0.3);
+    border-radius: 10px;
+    background-image: url(images.png);
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: 100%;
+}
+.box h2{
+    margin: 30px 0 30px;
+    padding: 0;
+    color: rgb(112, 108, 108);
+    text-align: center;
+}
+.box .inputBox{
+    position: relative;
+
+}
+.box .inputBox input {
+    width: 100%;
+    padding: 10px 0;
+    color: black;
+    font-size: 16px;
+    margin-bottom: 30px;
+    border: none;
+    border-bottom: 1px solid #466995;
+    outline: none;
+    background: transparent;
+}
+.box .inputBox label{
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px 0;
+    color: black;
+    font-size: 20px;
+    transition: .5s;
+}
+.box .inputBox input:focus ~ label,
+.box .inputBox input:valid ~ label{
+  top: -25px;
+  color: #466995;
+  font-size: 16px;
+}
+button{
+  background: #466995;
+  border: 0;
+  padding: 10px 30px;
+  color: #fff;
+  transition: 0.4s;
+  border-radius: 4px;
+  margin-top: 10px;
+  text-align: center;
+}
+button:hover{
+  letter-spacing: 2px;
+}
+.box p a{
+  text-decoration: none;
+  color: #466995;
+}
+.box p a:hover{
+  text-decoration: underline;
+}
+.container{
+    display: none;
+    background-color: white;
+}
+.top{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0 1.5em
+}
+.top p{
+    padding-bottom: 1em;
+}
+.first{
+    font-size: 25px;
+    font-weight: 500;
+    color: rgb(99, 93, 93);
+}
+.name, .timer{
+    font-size: 60px;
+   color:  rgb(99, 93, 93);
+}
+.top img{
+    width: 60%;
+}
+.text a{
+    display: inline-block;
+    position: relative;
+    text-decoration: none;
+    font-size: 20px;
+    border-radius: 3px;
+    padding: 15px 30px;
+    background-color: #466995;
+    box-shadow: 10px 10px 16px 3px rgba(0,0,0,0.3);
+    overflow: hidden;
+    color: white;
+    transition: 0.2s;
+}
+.text a:hover{
+    background-color: transparent;
+    color: #466995;
+}
+.text a span{
+    position: absolute;
+    display: block;
+}
+.text a span:nth-child(1){
+    top: 0;
+    left: 0%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #466995);
+}
+.text a:hover span:nth-child(1){
+    left: 100%;
+    transition: 1s;
+}
+
+.text a span:nth-child(3){
+    bottom: 0;
+    right: 0%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg, transparent, #466995);
+}
+.text a:hover span:nth-child(3){
+    right: 100%;
+    transition: 1s;
+    transition-delay: 0.5s;
+}
+
+.text a span:nth-child(2){
+    top: -100px;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg, transparent, #466995);
+}
+.text a:hover span:nth-child(2){
+    top: 100%;
+    transition: 1s;
+    transition-delay: 0.25s;
+}
+
+.text a span:nth-child(4){
+    bottom: -100px;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(360deg, transparent, #466995);
+}
+.text a:hover span:nth-child(4){
+    bottom: 100%;
+    transition: 1s;
+    transition-delay: 0.75s;
+}
+@media(max-width : 600px){
+    .top{
+        display: block;
+        padding: 0;
+        text-align: center;
+        padding: 1em 2em;
+    }
+    .top img{
+        width: 100%;
+    }
+}
+.groups{
+    width: 60%;
+}
+.details{
+    display: flex;
+    padding: 4em 0;
+    justify-content: space-evenly;
+    text-align: center;
+}
+.data{
+    padding: .5em 2em;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.8);
+    border-radius: 8px;
+}
+@media(max-width : 880px){
+    .details{
+        display: block;
+        justify-content: space-between;
+        min-width: 300px;
+        margin: 0 auto ;
+        padding: 1em;
+    }
+    .data{
+        margin-bottom: 2em;
+    }
+}
+ ion-icon{
+    font-size: 25px;
+    color: rgb(99, 93, 93);
+}
+.count{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#demo{
+    height: 100px;
+    min-width: 40%;
+    background-color: white;
+    box-shadow: 10px 10px 16px 3px rgba(0,0,0,0.3);
+    color: rgb(82, 76, 76);
+    line-height: 100px;
+    text-align: center;
+    font-size: 40px;
+    margin-top: 0px;
+    border-radius: 5px;
+}
+.last{
+    font-size: 32px;
+    font-weight: 800;
+    text-align: center;
+    color: rgb(112, 108, 108);
+}
+.section{
+    transition: transform 1s, opacity 1s;
+}
+.section--hidden {
+    opacity: 0;
+    transform: translateY(8rem);
+}
+.author{
+    text-align: right;
+    padding: 1em .5em;
+    font-size: 20px;
+}
+.author p{
+    padding-bottom: 5px;
+}
+.author span{
+    font-size: 30px;
+}
+.links a {
+    margin-left: 20px;
+    transition: 0.5s;
+    position: relative;
+}
+.links a:hover{
+    top: 5px;
+}
+.links a ion-icon{
+    color: #466995;
+    font-size: 32px;
+}
+@media(max-width: 500px){
+    .author{
+        text-align: center;
+    }
+}
+.d-day{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    color: rgb(112, 108, 108);
+    height: 100vh;
+    font-size: 50px;
+    text-align: center;
+    padding: 1em;
+}
+.d-day img{
+    width: 60%;
+}
+@media(max-width : 880px){
+    .d-day{
+        display: block;
+    }
+}
+.day-hidden{
+    display: none;
+}
