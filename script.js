@@ -17,7 +17,7 @@ const theDay = document.querySelector('.d-day')
 
 
 const d1 = new Date()
-const d2 = new Date(2022, 10, 26, 00)
+const d2 = new Date(2023, 10, 24, 00)
 const time = d2- d1 
 const days = Math.floor(time/(1000 * 60 * 60 * 24))
 timer.innerHTML = `${days} days`
