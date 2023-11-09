@@ -45,7 +45,7 @@ enter.addEventListener('click', function(e){
 })
 
 
-const date = new Date('Nov 25, 2023 00:00:00').getTime()
+const date = new Date('Nov 24, 2023 00:00:00').getTime()
 
 
 const timers = setInterval(function(){
